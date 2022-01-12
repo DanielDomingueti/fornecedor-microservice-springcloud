@@ -1,7 +1,5 @@
 package br.com.alura.microservice.fornecedor.model;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,7 +18,20 @@ public class Produto {
 	
 	private String descricao;
 	
-	private BigDecimal preco;
+	private Double preco;
+
+	
+	
+	public Produto() {
+	}
+
+	public Produto(String nome, String estado, String descricao, Double i) {
+		super();
+		this.nome = nome;
+		this.estado = estado;
+		this.descricao = descricao;
+		this.preco = i;
+	}
 
 	public Long getId() {
 		return id;
@@ -46,11 +57,11 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public BigDecimal getPreco() {
+	public Double getPreco() {
 		return preco;
 	}
 
-	public void setPreco(BigDecimal preco) {
+	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
 

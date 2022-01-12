@@ -26,22 +26,22 @@ public class Pedido {
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "pedidoId")
-	private List<PedidoItem> itens;
+	private List<PedidoItem> list;
 	
-	public Pedido(List<PedidoItem> itens) {
-		this.itens = itens;
+	public Pedido(List<PedidoItem> list) {
+		this.list = list;
 		this.status = PedidoStatus.RECEBIDO;
 	}
 	
 	public Pedido() {
 	}
 
-	public List<PedidoItem> getItens() {
-		return itens;
+	public List<PedidoItem> getlist() {
+		return list;
 	}
 
-	public void setItens(List<PedidoItem> itens) {
-		this.itens = itens;
+	public void setlist(List<PedidoItem> list) {
+		this.list = list;
 	}
 
 	public Long getId() {

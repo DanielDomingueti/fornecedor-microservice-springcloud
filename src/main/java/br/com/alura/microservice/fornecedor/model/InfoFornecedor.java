@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.aspectj.lang.annotation.RequiredTypes;
+
 @Entity
 public class InfoFornecedor {
 
@@ -17,6 +19,15 @@ public class InfoFornecedor {
 	private String estado;
 	
 	private String endereco;
+
+	public InfoFornecedor() {}
+	
+	public InfoFornecedor(String nome, String estado, String endereco) {
+		super();
+		this.nome = nome;
+		this.estado = estado;
+		this.endereco = endereco;
+	}
 
 	public Long getId() {
 		return id;
